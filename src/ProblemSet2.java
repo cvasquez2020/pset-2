@@ -27,10 +27,37 @@ public class ProblemSet2 {
          * Prompt the user to enter the following information (in order): first name, last
          * name, grade, age, and hometown.
          */
+	
+	System.out.println("\n");
 
+	System.out.println("Enter your first name: ");
+	String firstName = in.nextLine();
+
+	System.out.println("Enter your last name: ");
+	String lastName = in.nextLine();
+
+	System.out.println("Enter your grade: ");	
+	int grade = in.nextInt();
+
+	System.out.println("Enter your age: ");	
+	int age = in.nextInt();	
+	in.nextLine();
+
+	System.out.println("Enter your hometown: ");
+	String homeTown = in.nextLine();
         
+	System.out.println("NAME      : "+firstName+" "+lastName);
+	
+	System.out.println("GRADE     : "+grade);
+	
+	System.out.println("AGE       : "+age);
+
+	System.out.println("HOMETOWN  : "+homeTown);
+	
+	
+	in.close();
         
-        /*
+	/*
          * Exercise 2.
          * 
          * Given a dollar amount in the range [0.00, 1.00], print the number of dollar
