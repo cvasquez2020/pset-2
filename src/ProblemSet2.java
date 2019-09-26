@@ -28,34 +28,36 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 	
-	System.out.println("\n");
-
-	System.out.println("Enter your first name: ");
+	System.out.print("\n");
+	
+	System.out.print("Enter your first name: ");
 	String firstName = in.nextLine();
-
-	System.out.println("Enter your last name: ");
+	
+	System.out.print("Enter your last name: ");
 	String lastName = in.nextLine();
-
-	System.out.println("Enter your grade: ");	
+	
+	System.out.print("Enter your grade: ");	
 	int grade = in.nextInt();
 
-	System.out.println("Enter your age: ");	
+	System.out.print("Enter your age: ");	
 	int age = in.nextInt();	
 	in.nextLine();
-
-	System.out.println("Enter your hometown: ");
+	
+	System.out.print("Enter your hometown: ");
 	String homeTown = in.nextLine();
         
+	System.out.print("\n");
+	
 	System.out.println("NAME      : "+firstName+" "+lastName);
 	
 	System.out.println("GRADE     : "+grade);
 	
 	System.out.println("AGE       : "+age);
-
+	
 	System.out.println("HOMETOWN  : "+homeTown);
 	
 	
-	in.close();
+	
         
 	/*
          * Exercise 2.
@@ -63,8 +65,40 @@ public class ProblemSet2 {
          * Given a dollar amount in the range [0.00, 1.00], print the number of dollar
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
+	
+	double DOLLAR_VALUE = 1.00;
+	double QUARTER_VALUE = 0.25;
+	double DIME_VALUE = 0.10;
+	double NICKEL_VALUE = 0.05;
+	double PENNY_VALUE= 0.01;
 
+	System.out.print("\n");
+	
+	System.out.print("Enter a dollar amount: ");
+	double money = in.nextDouble();	
 
+	System.out.print("\n");
+
+	double dollars = money/DOLLAR_VALUE;	
+	System.out.println("DOLLARS	 : "+(int)dollars);
+	money = money - (int)dollars*DOLLAR_VALUE;	
+
+	double quarters = money/QUARTER_VALUE;		
+	System.out.println("QUARTERS : "+(int)quarters);
+	money = money - (int)quarters*QUARTER_VALUE;  
+	
+	double dimes = money/DIME_VALUE;
+	System.out.println("DIMES	 : "+(int)dimes);
+	money = money - (int)dimes*DIME_VALUE;	
+
+	double nickels = money/NICKEL_VALUE;
+	System.out.println("NICKELS	 : "+(int)nickels);
+	money = money - (int)nickels*NICKEL_VALUE;
+
+	double pennies = money/PENNY_VALUE;
+	System.out.println("PENNIES	 : "+(int)pennies);
+	
+	in.close();
 
         /*
          * Exercise 3.
