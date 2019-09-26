@@ -98,7 +98,7 @@ public class ProblemSet2 {
 	double pennies = money/PENNY_VALUE;
 	System.out.println("PENNIES	 : "+(int)pennies);
 	
-	in.close();
+	
 
         /*
          * Exercise 3.
@@ -107,7 +107,20 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+	double TWENTY_BILL_VALUE = 20.00;
+	double TEN_BILL_VALUE = 10.00;
+	double FIVE_BILL_VALUE = 5.00;
+	
+	int billCount;
 
+	System.out.println("Enter a dollar amount: ");
+	double money = in.nextDouble();	
+
+	billCount = (int)money/TWENTY_BILL_VALUE;
+	
+	System.out.println(billCount);
+
+	in.close();
 
         /*
          * Exercise 4.
