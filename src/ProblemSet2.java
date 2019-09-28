@@ -147,11 +147,8 @@ public class ProblemSet2 {
   	coinCount += Math.floor(money/PENNY_VALUE);
 
 	System.out.print("\n");
-
 	System.out.print("BILLS : "+(int)billCount);
-
 	System.out.print("\n");
-
 	System.out.println("COINS : "+coinCount);
 
         /*
@@ -179,6 +176,7 @@ public class ProblemSet2 {
 	int feet = (int) Math.floor(inches/INCHES_PER_FOOT);
 	inches -= feet*INCHES_PER_FOOT;
 
+	System.out.print("\n");
 	System.out.println("MILES	: "+miles);
 	System.out.println("YARDS	: "+yards);
 	System.out.println("FEET	: "+feet);
@@ -191,8 +189,24 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
         
+	int CM_PER_KM = 100000;
+	int CM_PER_M = 100;
 
-        
+	System.out.print("\n");
+	System.out.print("Enter a number of centimeters: ");
+	int centimeters = in.nextInt();
+ 
+	int kilometers = (int) Math.floor(centimeters/CM_PER_KM);
+        centimeters -= kilometers*CM_PER_KM;
+
+	int meters = (int) Math.floor(centimeters/CM_PER_M);
+        centimeters -= meters*CM_PER_M;
+
+	System.out.print("\n");
+	System.out.println("KILOMETERS  : "+kilometers);
+	System.out.println("METERS      : "+meters);
+	System.out.println("CENTIMETERS : "+centimeters);
+
         /*
          * Exercise 6.
          * 
