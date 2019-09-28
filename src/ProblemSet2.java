@@ -238,7 +238,31 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
         
+	System.out.print("\n");
+	
+	System.out.print("Enter a length: ");
+	double length = in.nextDouble();
+	 
+	System.out.print("Enter a width: ");
+	double width = in.nextDouble();
 
+	area = width*length;
+
+	double perimeter = 2*width+2*length;
+
+	double diagonal = Math.hypot(width,length);
+
+	System.out.print("\n");
+	System.out.print("AREA      : ");
+	System.out.printf("%,.2f", area);
+	System.out.print("\n");
+	System.out.print("PERIMETER : ");
+	System.out.printf("%,.2f", perimeter);
+	System.out.print("\n");
+	System.out.print("DIAGONAL  : ");
+	System.out.printf("%,.2f", diagonal);
+	System.out.print("\n");
+	
         
         /*
          * Exercise 8.
