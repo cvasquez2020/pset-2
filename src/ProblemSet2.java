@@ -161,8 +161,29 @@ public class ProblemSet2 {
          * and inches.
          */
 
+	int INCHES_PER_MILE = 63360;
+        int INCHES_PER_YARD = 36;
+	int INCHES_PER_FOOT = 12;
 
-        
+	System.out.print("\n");
+	
+	System.out.print("Enter a number of inches: ");
+	int inches = in.nextInt();	
+
+	int miles = (int) Math.floor(inches/INCHES_PER_MILE);
+	inches -= miles*INCHES_PER_MILE;
+
+	int yards = (int) Math.floor(inches/INCHES_PER_YARD);
+	inches -= yards*INCHES_PER_YARD;
+	
+	int feet = (int) Math.floor(inches/INCHES_PER_FOOT);
+	inches -= feet*INCHES_PER_FOOT;
+
+	System.out.println("MILES	: "+miles);
+	System.out.println("YARDS	: "+yards);
+	System.out.println("FEET	: "+feet);
+	System.out.println("INCHES	: "+inches);
+
         /*
          * Exercise 5.
          * 
