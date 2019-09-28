@@ -81,24 +81,24 @@ public class ProblemSet2 {
 
 	double dollars = money/DOLLAR_VALUE;	
 	System.out.println("DOLLARS	 : "+(int)dollars);
-	money = money - (int)dollars*DOLLAR_VALUE;	
+	money -= (int)dollars*DOLLAR_VALUE;	
 
 	double quarters = money/QUARTER_VALUE;		
 	System.out.println("QUARTERS : "+(int)quarters);
-	money = money - (int)quarters*QUARTER_VALUE;  
+	money -= (int)quarters*QUARTER_VALUE;  
 	
 	double dimes = money/DIME_VALUE;
 	System.out.println("DIMES	 : "+(int)dimes);
-	money = money - (int)dimes*DIME_VALUE;	
+	money -= (int)dimes*DIME_VALUE;	
 
 	double nickels = money/NICKEL_VALUE;
 	System.out.println("NICKELS	 : "+(int)nickels);
-	money = money - (int)nickels*NICKEL_VALUE;
+	money -= (int)nickels*NICKEL_VALUE;
 
 	double pennies = money/PENNY_VALUE;
 	System.out.println("PENNIES	 : "+(int)pennies);
 	
-	
+	System.out.print("\n");
 
         /*
          * Exercise 3.
@@ -111,16 +111,48 @@ public class ProblemSet2 {
 	double TEN_BILL_VALUE = 10.00;
 	double FIVE_BILL_VALUE = 5.00;
 	
-	int billCount;
-
-	System.out.println("Enter a dollar amount: ");
-	double money = in.nextDouble();	
-
-	billCount = (int)money/TWENTY_BILL_VALUE;
+	int billCount = 0;
 	
-	System.out.println(billCount);
+	int coinCount = 0;
 
-	in.close();
+	System.out.print("Enter a dollar amount: ");
+	money = in.nextDouble();	
+
+	billCount += (money/TWENTY_BILL_VALUE);	
+	money -= Math.round(100*(TWENTY_BILL_VALUE*(Math.floor(money/TWENTY_BILL_VALUE))))/100.00;
+
+	billCount += (money/TEN_BILL_VALUE); 	
+	money -= Math.round(100.00*(TEN_BILL_VALUE*(Math.floor(money/TEN_BILL_VALUE))))/100.00;
+
+	billCount += (money/FIVE_BILL_VALUE); 
+	money -=  Math.round(100.00*(FIVE_BILL_VALUE*(Math.floor(money/FIVE_BILL_VALUE))))/100.00;
+	money = Math.round(100.00*(money))/100.00;
+
+	billCount += (money/DOLLAR_VALUE);
+	money = Math.round(100.00*(money - Math.floor(money)))/100.00;
+	money = Math.round(100.00*(money))/100.00;
+
+	coinCount += Math.floor(money/QUARTER_VALUE);
+	money -=  QUARTER_VALUE*(Math.floor(money/QUARTER_VALUE));
+	money = Math.round(100.00*(money))/100.00;
+
+	coinCount += Math.floor(money/DIME_VALUE);
+	money -=  DIME_VALUE*(Math.floor(money/DIME_VALUE));
+	money = Math.round(100.00*(money))/100.00;
+
+	coinCount += Math.floor(money/NICKEL_VALUE);
+	money -=  NICKEL_VALUE*(Math.floor(money/NICKEL_VALUE));  
+	money = Math.round(100.00*(money))/100.00;
+
+  	coinCount += Math.floor(money/PENNY_VALUE);
+
+	System.out.print("\n");
+
+	System.out.print("BILLS : "+(int)billCount);
+
+	System.out.print("\n");
+
+	System.out.println("COINS : "+coinCount);
 
         /*
          * Exercise 4.
