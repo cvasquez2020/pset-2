@@ -28,66 +28,66 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-	       System.out.print("\n");
-	       System.out.print("Enter your first name: ");
-         String firstName = in.nextLine();
+	System.out.print("\n");
+	System.out.print("Enter your first name: ");
+        String firstName = in.nextLine();
 
-	       System.out.print("Enter your last name: ");
-	       String lastName = in.nextLine();
+	System.out.print("Enter your last name: ");
+	String lastName = in.nextLine();
 
-	       System.out.print("Enter your grade: ");
-	       int grade = in.nextInt();
+	System.out.print("Enter your grade: ");
+	int grade = in.nextInt();
 
-	       System.out.print("Enter your age: ");
-	       int age = in.nextInt();
-	       in.nextLine();
+	System.out.print("Enter your age: ");
+	int age = in.nextInt();
+	in.nextLine();
 
-	       System.out.print("Enter your hometown: ");
-	       String homeTown = in.nextLine();
+	System.out.print("Enter your hometown: ");
+	String homeTown = in.nextLine();
 
-	       System.out.print("\n");
-	       System.out.println("NAME      : " + firstName + " " + lastName);
-	       System.out.println("GRADE     : " + grade);
-	       System.out.println("AGE       : " + age);
-	       System.out.println("HOMETOWN  : " + homeTown);
+	System.out.print("\n");
+	System.out.println("NAME      : " + firstName + " " + lastName);
+	System.out.println("GRADE     : " + grade);
+	System.out.println("AGE       : " + age);
+	System.out.println("HOMETOWN  : " + homeTown);
 
-	       /*
+	/*
          * Exercise 2.
          *
          * Given a dollar amount in the range [0.00, 1.00], print the number of dollar
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
-	       double DOLLAR_VALUE = 1.00;
-	       double QUARTER_VALUE = 0.25;
-	       double DIME_VALUE = 0.10;
-	       double NICKEL_VALUE = 0.05;
-	       double PENNY_VALUE= 0.01;
+	double DOLLAR_VALUE = 1.00;
+	double QUARTER_VALUE = 0.25;
+	double DIME_VALUE = 0.10;
+	double NICKEL_VALUE = 0.05;
+	double PENNY_VALUE= 0.01;
 
-	       System.out.print("\n");
-	       System.out.print("Enter a dollar amount: ");
-	       double money = in.nextDouble();
-	       System.out.print("\n");
+	System.out.print("\n");
+	System.out.print("Enter a dollar amount: ");
+	double money = in.nextDouble();
+	System.out.print("\n");
 
-         double dollars = money / DOLLAR_VALUE;
-         System.out.println("DOLLARS	 : " + (int) dollars);
-         money -= (int) dollars * DOLLAR_VALUE;
+        double dollars = money / DOLLAR_VALUE;
+        System.out.println("DOLLARS	 : " + (int) dollars);
+        money -= (int) dollars * DOLLAR_VALUE;
 
-         double quarters = money / QUARTER_VALUE;
-         System.out.println("QUARTERS : " + (int) quarters);
-         money -= (int) quarters * QUARTER_VALUE;
+        double quarters = money / QUARTER_VALUE;
+        System.out.println("QUARTERS : " + (int) quarters);
+        money -= (int) quarters * QUARTER_VALUE;
 
-         double dimes = money / DIME_VALUE;
-	       System.out.println("DIMES	 : " + (int) dimes);
-	       money -= (int) dimes * DIME_VALUE;
+        double dimes = money / DIME_VALUE;
+	System.out.println("DIMES	 : " + (int) dimes);
+	money -= (int) dimes * DIME_VALUE;
 
-	       double nickels = money / NICKEL_VALUE;
-	       System.out.println("NICKELS	 : " + (int) nickels);
-	       money -= (int) nickels * NICKEL_VALUE;
+	double nickels = money / NICKEL_VALUE;
+	System.out.println("NICKELS	 : " + (int) nickels);
+	money -= (int) nickels * NICKEL_VALUE;
 
-	       double pennies = money / PENNY_VALUE;
-         System.out.println("PENNIES	 : " + (int) pennies);
-	       System.out.print("\n");
+	double pennies = money / PENNY_VALUE;
+        System.out.println("PENNIES	 : " + (int) pennies);
+	System.out.print("\n");
 
         /*
          * Exercise 3.
@@ -96,51 +96,51 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-	       double TWENTY_BILL_VALUE = 20.00;
-	       double TEN_BILL_VALUE = 10.00;
-	       double FIVE_BILL_VALUE = 5.00;
+	double TWENTY_BILL_VALUE = 20.00;
+	double TEN_BILL_VALUE = 10.00;
+	double FIVE_BILL_VALUE = 5.00;
 
 	       int billCount = 0;
-         int coinCount = 0;
+        int coinCount = 0;
 
-	       System.out.print("Enter a dollar amount: ");
-	       money = in.nextDouble();
+	System.out.print("Enter a dollar amount: ");
+	money = in.nextDouble();
 
-	       billCount += (money / TWENTY_BILL_VALUE);
-	       money -= Math.round(100 * (TWENTY_BILL_VALUE
-         * (Math.floor(money / TWENTY_BILL_VALUE)))) / 100.00;
+	billCount += (money / TWENTY_BILL_VALUE);
+	money -= Math.round(100 * (TWENTY_BILL_VALUE
+        * (Math.floor(money / TWENTY_BILL_VALUE)))) / 100.00;
 
-	       billCount += (money / TEN_BILL_VALUE);
-	       money -= Math.round(100.00 * (TEN_BILL_VALUE
-         * (Math.floor(money / TEN_BILL_VALUE)))) / 100.00;
+	billCount += (money / TEN_BILL_VALUE);
+	money -= Math.round(100.00 * (TEN_BILL_VALUE
+        * (Math.floor(money / TEN_BILL_VALUE)))) / 100.00;
 
-	       billCount += (money / FIVE_BILL_VALUE);
-	       money -=  Math.round(100.00 * (FIVE_BILL_VALUE
-         * (Math.floor(money / FIVE_BILL_VALUE)))) / 100.00;
-	       money = Math.round(100.00 * (money)) / 100.00;
+	billCount += (money / FIVE_BILL_VALUE);
+	money -=  Math.round(100.00 * (FIVE_BILL_VALUE
+        * (Math.floor(money / FIVE_BILL_VALUE)))) / 100.00;
+	money = Math.round(100.00 * (money)) / 100.00;
 
-	       billCount += (money / DOLLAR_VALUE);
-	       money = Math.round(100.00 * (money - Math.floor(money))) / 100.00;
-	       money = Math.round(100.00 * money) / 100.00;
+	billCount += (money / DOLLAR_VALUE);
+	money = Math.round(100.00 * (money - Math.floor(money))) / 100.00;
+	money = Math.round(100.00 * money) / 100.00;
 
-	       coinCount += Math.floor(money / QUARTER_VALUE);
-	       money -=  QUARTER_VALUE * (Math.floor(money / QUARTER_VALUE));
-	       money = Math.round(100.00 * money) / 100.00;
+	coinCount += Math.floor(money / QUARTER_VALUE);
+	money -=  QUARTER_VALUE * (Math.floor(money / QUARTER_VALUE));
+	money = Math.round(100.00 * money) / 100.00;
 
-	       coinCount += Math.floor(money / DIME_VALUE);
-	       money -=  DIME_VALUE * (Math.floor(money / DIME_VALUE));
-	       money = Math.round(100.00 * money) / 100.00;
+	coinCount += Math.floor(money / DIME_VALUE);
+	money -=  DIME_VALUE * (Math.floor(money / DIME_VALUE));
+	money = Math.round(100.00 * money) / 100.00;
 
-	       coinCount += Math.floor(money / NICKEL_VALUE);
-	       money -=  NICKEL_VALUE * (Math.floor(money / NICKEL_VALUE));
-	       money = Math.round(100.00 * (money)) / 100.00;
+	coinCount += Math.floor(money / NICKEL_VALUE);
+	money -=  NICKEL_VALUE * (Math.floor(money / NICKEL_VALUE));
+	money = Math.round(100.00 * (money)) / 100.00;
 
-         coinCount += Math.floor(money / PENNY_VALUE);
+        coinCount += Math.floor(money / PENNY_VALUE);
 
-	       System.out.print("\n");
-	       System.out.print("BILLS : " + (int) billCount);
-	       System.out.print("\n");
-	       System.out.println("COINS : " + coinCount);
+	System.out.print("\n");
+	System.out.print("BILLS : " + (int) billCount);
+	System.out.print("\n");
+	System.out.println("COINS : " + coinCount);
 
         /*
          * Exercise 4.
@@ -149,28 +149,28 @@ public class ProblemSet2 {
          * and inches.
          */
 
-	       int INCHES_PER_MILE = 63360;
-         int INCHES_PER_YARD = 36;
-         int INCHES_PER_FOOT = 12;
+	int INCHES_PER_MILE = 63360;
+        int INCHES_PER_YARD = 36;
+        int INCHES_PER_FOOT = 12;
 
-	       System.out.print("\n");
-	       System.out.print("Enter a number of inches: ");
-	       int inches = in.nextInt();
+	System.out.print("\n");
+	System.out.print("Enter a number of inches: ");
+	int inches = in.nextInt();
 
-	       int miles = (int) Math.floor(inches / INCHES_PER_MILE);
-         inches -= miles * INCHES_PER_MILE;
+	int miles = (int) Math.floor(inches / INCHES_PER_MILE);
+        inches -= miles * INCHES_PER_MILE;
 
-	       int yards = (int) Math.floor(inches / INCHES_PER_YARD);
-	       inches -= yards * INCHES_PER_YARD;
+	int yards = (int) Math.floor(inches / INCHES_PER_YARD);
+	inches -= yards * INCHES_PER_YARD;
 
-	       int feet = (int) Math.floor(inches / INCHES_PER_FOOT);
-	       inches -= feet * INCHES_PER_FOOT;
+	int feet = (int) Math.floor(inches / INCHES_PER_FOOT);
+	inches -= feet * INCHES_PER_FOOT;
 
-         System.out.print("\n");
-         System.out.println("MILES	: " + miles);
-	       System.out.println("YARDS	: " + yards);
-	       System.out.println("FEET	: " + feet);
-	       System.out.println("INCHES	: " + inches);
+        System.out.print("\n");
+        System.out.println("MILES	: " + miles);
+	System.out.println("YARDS	: " + yards);
+	System.out.println("FEET	: " + feet);
+	System.out.println("INCHES	: " + inches);
 
         /*
          * Exercise 5.
@@ -179,13 +179,12 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
 
-	      int CENTIMETERS_PER_KILOMETER = 100000;
-	      int CENTIMETERS_PER_METER = 100;
+	int CENTIMETERS_PER_KILOMETER = 100000;
+	int CENTIMETERS_PER_METER = 100;
 
-	      System.out.print("\n");
-
-	      System.out.print("Enter a number of centimeters: ");
-	      int centimeters = in.nextInt();
+	System.out.print("\n");
+	System.out.print("Enter a number of centimeters: ");
+	int centimeters = in.nextInt();
 
         int kilometers = (int) Math.floor(centimeters
         / CENTIMETERS_PER_KILOMETER);
@@ -194,10 +193,10 @@ public class ProblemSet2 {
         int meters = (int) Math.floor(centimeters / CENTIMETERS_PER_METER);
         centimeters -= meters * CENTIMETERS_PER_METER;
 
-	      System.out.print("\n");
+	System.out.print("\n");
         System.out.println("KILOMETERS  : " + kilometers);
-	      System.out.println("METERS      : " + meters);
-	      System.out.println("CENTIMETERS : " + centimeters);
+	System.out.println("METERS      : " + meters);
+	System.out.println("CENTIMETERS : " + centimeters);
 
         /*
          * Exercise 6.
@@ -205,21 +204,21 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
 
-	      System.out.print("\n");
-	      System.out.print("Enter a diameter: " );
-	      double diameter = in.nextDouble();
+	System.out.print("\n");
+	System.out.print("Enter a diameter: " );
+	double diameter = in.nextDouble();
 
-	      double radius = diameter / 2;
+	double radius = diameter / 2;
         double area = Math.PI * Math.pow(radius, 2);
-	      double circumference = 2 * Math.PI * radius;
+	double circumference = 2 * Math.PI * radius;
 
-	      System.out.print("\n");
-	      System.out.print("AREA          : ");
-	      System.out.printf("%,.2f", area);
-	      System.out.print("\n");
-	      System.out.print("CIRCUMFERENCE : ");
-	      System.out.printf("%,.2f", circumference);
-	      System.out.print("\n");
+	System.out.print("\n");
+	System.out.print("AREA          : ");
+	System.out.printf("%,.2f", area);
+	System.out.print("\n");
+	System.out.print("CIRCUMFERENCE : ");
+	System.out.printf("%,.2f", circumference);
+	System.out.print("\n");
 
         /*
          * Exercise 7.
@@ -228,28 +227,28 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
-	      System.out.print("\n");
-	      System.out.print("Enter a length: ");
-	      double lengthRectangle = in.nextDouble();
+	System.out.print("\n");
+	System.out.print("Enter a length: ");
+	double lengthRectangle = in.nextDouble();
 
-	      System.out.print("Enter a width: ");
-	      double widthRectangle = in.nextDouble();
+	System.out.print("Enter a width: ");
+	double widthRectangle = in.nextDouble();
 
-	      area = widthRectangle * lengthRectangle;
+	area = widthRectangle * lengthRectangle;
 
-	      double perimeter = 2 * widthRectangle + 2 * lengthRectangle;
-	      double diagonal = Math.hypot(widthRectangle, lengthRectangle);
+	double perimeter = 2 * widthRectangle + 2 * lengthRectangle;
+	double diagonal = Math.hypot(widthRectangle, lengthRectangle);
 
-	      System.out.print("\n");
-	      System.out.print("AREA      : ");
-	      System.out.printf("%,.2f", area);
-	      System.out.print("\n");
-	      System.out.print("PERIMETER : ");
-	      System.out.printf("%,.2f", perimeter);
-	      System.out.print("\n");
-	      System.out.print("DIAGONAL  : ");
-	      System.out.printf("%,.2f", diagonal);
-	      System.out.print("\n");
+	System.out.print("\n");
+	System.out.print("AREA      : ");
+	System.out.printf("%,.2f", area);
+	System.out.print("\n");
+	System.out.print("PERIMETER : ");
+	System.out.printf("%,.2f", perimeter);
+	System.out.print("\n");
+	System.out.print("DIAGONAL  : ");
+	System.out.printf("%,.2f", diagonal);
+	System.out.print("\n");
 
 
         /*
@@ -279,6 +278,7 @@ public class ProblemSet2 {
          *
          * Given a string, reverse and print the first and second halves of that string.
          */
+
         System.out.print("\n");
         System.out.print("Enter a String: ");
         String word = in.next();
