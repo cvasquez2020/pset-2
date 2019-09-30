@@ -179,25 +179,25 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
 
-	       int CENTIMETERS_PER_KILOMETER = 100000;
-	       int CENTIMETERS_PER_METER = 100;
+	      int CENTIMETERS_PER_KILOMETER = 100000;
+	      int CENTIMETERS_PER_METER = 100;
 
-	       System.out.print("\n");
+	      System.out.print("\n");
 
-	       System.out.print("Enter a number of centimeters: ");
-	       int centimeters = in.nextInt();
+	      System.out.print("Enter a number of centimeters: ");
+	      int centimeters = in.nextInt();
 
-         int kilometers = (int) Math.floor(centimeters
-         / CENTIMETERS_PER_KILOMETER);
-         centimeters -= kilometers * CENTIMETERS_PER_KILOMETER;
+        int kilometers = (int) Math.floor(centimeters
+        / CENTIMETERS_PER_KILOMETER);
+        centimeters -= kilometers * CENTIMETERS_PER_KILOMETER;
 
-         int meters = (int) Math.floor(centimeters / CENTIMETERS_PER_METER);
-         centimeters -= meters * CENTIMETERS_PER_METER;
+        int meters = (int) Math.floor(centimeters / CENTIMETERS_PER_METER);
+        centimeters -= meters * CENTIMETERS_PER_METER;
 
-	       System.out.print("\n");
-         System.out.println("KILOMETERS  : " + kilometers);
-	       System.out.println("METERS      : " + meters);
-	       System.out.println("CENTIMETERS : " + centimeters);
+	      System.out.print("\n");
+        System.out.println("KILOMETERS  : " + kilometers);
+	      System.out.println("METERS      : " + meters);
+	      System.out.println("CENTIMETERS : " + centimeters);
 
         /*
          * Exercise 6.
@@ -205,21 +205,21 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
 
-	       System.out.print("\n");
-	       System.out.print("Enter a diameter: " );
-	       double diameter = in.nextDouble();
+	      System.out.print("\n");
+	      System.out.print("Enter a diameter: " );
+	      double diameter = in.nextDouble();
 
-	       double radius = diameter / 2;
-         double area = Math.PI * Math.pow(radius, 2);
-	       double circumference = 2 * Math.PI * radius;
+	      double radius = diameter / 2;
+        double area = Math.PI * Math.pow(radius, 2);
+	      double circumference = 2 * Math.PI * radius;
 
-	       System.out.print("\n");
-	       System.out.print("AREA          : ");
-	       System.out.printf("%,.2f", area);
-	       System.out.print("\n");
-	       System.out.print("CIRCUMFERENCE : ");
-	       System.out.printf("%,.2f", circumference);
-	       System.out.print("\n");
+	      System.out.print("\n");
+	      System.out.print("AREA          : ");
+	      System.out.printf("%,.2f", area);
+	      System.out.print("\n");
+	      System.out.print("CIRCUMFERENCE : ");
+	      System.out.printf("%,.2f", circumference);
+	      System.out.print("\n");
 
         /*
          * Exercise 7.
@@ -228,28 +228,28 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
-	       System.out.print("\n");
-	       System.out.print("Enter a length: ");
-	       double lengthRectangle = in.nextDouble();
+	      System.out.print("\n");
+	      System.out.print("Enter a length: ");
+	      double lengthRectangle = in.nextDouble();
 
-	       System.out.print("Enter a width: ");
-	       double widthRectangle = in.nextDouble();
+	      System.out.print("Enter a width: ");
+	      double widthRectangle = in.nextDouble();
 
-	       area = widthRectangle * lengthRectangle;
+	      area = widthRectangle * lengthRectangle;
 
-	       double perimeter = 2 * widthRectangle + 2 * lengthRectangle;
-	       double diagonal = Math.hypot(widthRectangle, lengthRectangle);
+	      double perimeter = 2 * widthRectangle + 2 * lengthRectangle;
+	      double diagonal = Math.hypot(widthRectangle, lengthRectangle);
 
-	       System.out.print("\n");
-	       System.out.print("AREA      : ");
-	       System.out.printf("%,.2f", area);
-	       System.out.print("\n");
-	       System.out.print("PERIMETER : ");
-	       System.out.printf("%,.2f", perimeter);
-	       System.out.print("\n");
-	       System.out.print("DIAGONAL  : ");
-	       System.out.printf("%,.2f", diagonal);
-	       System.out.print("\n");
+	      System.out.print("\n");
+	      System.out.print("AREA      : ");
+	      System.out.printf("%,.2f", area);
+	      System.out.print("\n");
+	      System.out.print("PERIMETER : ");
+	      System.out.printf("%,.2f", perimeter);
+	      System.out.print("\n");
+	      System.out.print("DIAGONAL  : ");
+	      System.out.printf("%,.2f", diagonal);
+	      System.out.print("\n");
 
 
         /*
